@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default class Counter extends React.Component {
   constructor(props) {
     super(props)
@@ -22,9 +21,9 @@ export default class Counter extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.modifyAddCounter}>Add</button>
-        <button onClick={this.modifySubtractCounter}>Subtract</button>
+      <div className="component">
+        <button className="decrease" disabled={this.state.counter === 0} onClick={this.modifySubtractCounter}>&ndash;</button>
+        <button onClick={this.modifyAddCounter}>+</button>
         <p>{this.state.counter}</p>
       </div>
     )
